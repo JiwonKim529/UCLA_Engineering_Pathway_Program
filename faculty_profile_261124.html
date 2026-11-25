@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keck–EnCorps Summer Research Experience · Host Faculty Directory</title>
+<meta name="description" content="Browse UCLA faculty interested in hosting a STEM secondary teacher in their lab through the Keck–EnCorps Summer Research Experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2230; --ink-2:#4a5263; --ink-3:#6f7788;
+    --paper:#f7f5f0; --card:#ffffff; --line:#e4e0d6;
+    --navy:#1f3a5f; --navy-2:#2d5486; --accent:#c8832b; --accent-soft:#f6ead8;
+    --radius:14px; --shadow:0 1px 2px rgba(28,34,48,.06),0 4px 14px rgba(28,34,48,.06);
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+  a{color:var(--navy-2)}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header.site{background:var(--navy);color:#fff;padding:44px 0 92px;position:relative;overflow:hidden}
+  header.site::after{content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(200,131,43,.35),rgba(200,131,43,0) 70%)}
+  .eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#f3c98c;font-weight:600;margin:0 0 10px}
+  header.site h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.4vw,46px);line-height:1.12;margin:0 0 14px;max-width:760px}
+  header.site p.lede{margin:0;max-width:640px;color:#d9e2ef;font-size:17px}
+  header.site p.lede a{color:#f3c98c;font-weight:600;text-underline-offset:3px}
+  header.site p.lede a:hover{color:#fff}
+  .hero{display:flex;justify-content:space-between;align-items:flex-start;gap:56px;position:relative;z-index:1}
+  .hero-text{flex:1 1 auto;min-width:0}
+  .apply{flex:0 0 300px;margin-top:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);
+    border-radius:var(--radius);padding:24px 24px 26px;backdrop-filter:blur(4px)}
+  .apply-step{margin:0 0 4px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#f3c98c;font-weight:600}
+  .apply-title{margin:0 0 8px;font-family:var(--serif);font-size:23px;font-weight:600;line-height:1.2;color:#fff}
+  .apply-note{margin:0 0 18px;font-size:14.5px;color:#d9e2ef;line-height:1.5}
+  .apply-btn{width:100%;justify-content:center}
+  @media (max-width:900px){
+    .hero{flex-direction:column;gap:28px}
+    .apply{flex-basis:auto;width:100%;max-width:520px}
+  }
+
+  /* Toolbar */
+  .toolbar{margin-top:-56px;position:relative;z-index:2;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1px solid var(--line)}
+  .search{flex:1 1 320px;position:relative}
+  .search input{width:100%;font:inherit;padding:12px 14px 12px 42px;border:1px solid var(--line);border-radius:10px;background:#fbfaf7;color:var(--ink)}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--ink-3)}
+  .count{color:var(--ink-2);font-size:14px;white-space:nowrap}
+
+  /* Grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin:28px 0 56px}
+  .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 18px;
+    display:flex;flex-direction:column;gap:10px;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+  .card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#cfc8b8}
+  .card h2{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.25;margin:0}
+  .card h2 a{color:var(--ink);text-decoration:none}
+  .card h2 a::after{content:"";position:absolute;inset:0;border-radius:var(--radius)} /* whole card clickable */
+  .meta{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.45}
+  .meta .dept{display:block;color:var(--ink-3)}
+  .theme{margin:2px 0 0;color:var(--ink-2);font-size:14.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .card-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px}
+  .lablink{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:500;
+    max-width:62%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lablink:hover{text-decoration:underline}
+  .nolink{color:var(--ink-3)}
+  .more{color:var(--accent);font-weight:600;white-space:nowrap}
+  .empty{grid-column:1/-1;text-align:center;color:var(--ink-2);padding:48px 0}
+
+  /* Profile */
+  .back{display:inline-flex;align-items:center;gap:8px;color:#d9e2ef;text-decoration:none;font-size:15px;margin-bottom:22px}
+  .back:hover{color:#fff}
+  .profile-head .meta{color:#d9e2ef;font-size:17px}
+  .profile-head .meta .dept{color:#b9c7da}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none}
+  .btn-primary{background:var(--accent);color:#1c1406}
+  .btn-primary:hover{background:#d8923a}
+  .btn-ghost{border:1px solid rgba(255,255,255,.45);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .profile-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;margin:-56px 0 64px;position:relative;z-index:2}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .answers{padding:8px 32px}
+  .answer{padding:24px 0;border-bottom:1px solid var(--line)}
+  .answer:last-child{border-bottom:0}
+  .answer h3{font-family:var(--serif);font-weight:600;font-size:20px;margin:0 0 4px;color:var(--navy)}
+  .answer .q{margin:0 0 10px;font-size:13.5px;color:var(--ink-3);font-style:italic}
+  .answer .a p{margin:0 0 10px}
+  .answer .a p:last-child{margin-bottom:0}
+  .answer .a ul{margin:0 0 10px;padding-left:20px}
+  aside .panel{padding:20px}
+  aside{display:flex;flex-direction:column;gap:20px;align-self:start;position:sticky;top:20px}
+  aside h4{margin:0 0 10px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+  .jump a{display:block;padding:5px 0;text-decoration:none;color:var(--ink-2);font-size:14.5px}
+  .jump a:hover{color:var(--navy-2)}
+  figure.labimg{margin:0;overflow:hidden;border-radius:var(--radius)}
+  figure.labimg img{display:block;width:100%;height:auto;background:#ece8df}
+  figure.labimg figcaption{padding:10px 14px;font-size:13px;color:var(--ink-3)}
+  .pill{display:inline-block;background:var(--accent-soft);color:#7a4c12;border-radius:999px;padding:3px 10px;font-size:13px;font-weight:600}
+
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--ink-3);font-size:13.5px}
+
+  @media (max-width:860px){
+    .profile-body{grid-template-columns:1fr}
+    aside{position:static;order:-1}
+    .answers{padding:4px 22px}
+  }
+  @media print{
+    header.site{background:none;color:var(--ink);padding:0}
+    header.site::after,.toolbar,.back,aside .jump{display:none}
+    .profile-head .meta,.profile-head .meta .dept{color:var(--ink-2)}
+    .btn{color:var(--ink);border:1px solid var(--line)}
+    .profile-body{margin-top:16px;grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<footer><div class="wrap">Keck–EnCorps Summer Research Experience · Faculty responses to the host-lab interest form. Lab images are provided by faculty.</div></footer>
+
+<script>
+/* =====================================================================
+   FACULTY DATA
+   To add a professor's title or department, fill in the empty quotes:
+       "title": "Associate Professor",
+       "department": "Civil & Environmental Engineering",
+   Blank fields are hidden on the page, so you can fill them in gradually.
+   ===================================================================== */
+/* =====================================================================
+   GOOGLE FORM LINK
+   Replace PASTE_GOOGLE_FORM_URL_HERE with your form's link, keeping the
+   quotes, e.g. "https://forms.gle/AbC123xyz". It is used in the intro
+   sentence and in the "Open the Google Form" button.
+   ===================================================================== */
+const GOOGLE_FORM_URL = "PASTE_GOOGLE_FORM_URL_HERE";
+
+const FACULTY = [
+  {
+    "id": "aaron-meyer",
+    "firstName": "Aaron",
+    "lastName": "Meyer",
+    "title": "",
+    "department": "",
+    "email": "ameyer@ucla.edu",
+    "labUrl": "https://asmlab.org",
+    "imageId": "",
+    "researchThemes": "We use computational models to study intercellular signaling within the immune system.",
+    "dayToDay": "About half of the lab has some experimental focus, so they would be running different wet lab assays. The others are computational, mostly focusing on exploratory data analysis.",
+    "skills": "Data exploration techniques, working with AI models, immune assays.",
+    "bigIdeas": "Diseases arise through a breakdown between cells in our body. The patterns of this communication are complex, but really important to understanding how difficult-to-treat diseases might be treated.",
+    "whyHost": "This seems like an interesting opportunity to think about how we make our work more accessible to the public.",
+    "mentor": "",
+    "mentoringEnvironment": "Particularly the computational work is likely transferrable to a secondary school environment, since it doesn't require expensive equipment.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "abeer-alwan",
+    "firstName": "Abeer",
+    "lastName": "Alwan",
+    "title": "",
+    "department": "",
+    "email": "alwan@ee.ucla.edu",
+    "labUrl": "https://www.seas.ucla.edu/spapl/",
+    "imageId": "",
+    "researchThemes": "Speech and Audio AI and signal processing",
+    "dayToDay": "Research various topics especially on Machine Learning as applied to speech and audio.",
+    "skills": "How to analyze speech and audio signals, understand machine learning basics, and learn how to use AI algorithms in analyzing and recognizing speech signals.",
+    "bigIdeas": "Speech is an important biomarker that can reveal underlying emotion and illness (such as depression and Alzheimer's). By improving these biomarkers and AI algorithms, we could detect certain illnesses at an early stage. In addition, the same biomarkers can be used to assess pronunciation and reading difficulty of K-12 students in the classroom. Early detection of reading and/or pronunciation difficulties can lead to early intervention techniques.",
+    "whyHost": "So that the teacher can teach her/his students these skills.",
+    "mentor": "",
+    "mentoringEnvironment": "The multidisciplinary nature of our research can be very engaging for a STEM secondary teacher. We often collaborate with faculty at the Medical School, Education, and Linguistics.",
+    "outreach": "Yes, I often visit high schools to talk about our research. I also teach high school students in the COSMOS program.",
+    "newToOutreach": false
+  },
+  {
+    "id": "aditya-nandy",
+    "firstName": "Aditya",
+    "lastName": "Nandy",
+    "title": "",
+    "department": "",
+    "email": "aditya.nandy@ucla.edu",
+    "labUrl": "https://adityanandy.github.io",
+    "imageId": "140hI2Q9QjxuQXqvE5Sq1Jc93uMM33vP3",
+    "researchThemes": "My lab builds quantitative multi-scale models (spanning machine learning and physics-based simulation) to understand and design systems where transition metals play a central role, from inorganic materials to proteins that coordinate metals. We are especially drawn to complex systems where experimental observables exist but are difficult to deconvolute. We intend to use computation to extract chemical insight that experiments done by one group alone cannot easily provide.",
+    "dayToDay": "Students in my \"lab\" sit in an office space. We discuss the problems that they are solving, and students run simulations on our computers or on high performance computers operated by the National Science Foundation. We do a lot of \"thinking\" work and simple minimal models to gain understanding of chemical behavior at different scales.",
+    "skills": "In my lab, a teacher would gain exposure to the landscape of molecular simulation, including how method choice depends on system studied (e.g. small molecules vs. proteins), and to the unique challenges of applying machine learning to chemical problems. They would learn how to leverage chemical intuition to select appropriate simulation techniques, how to connect computational results to experimental observables, and how domain knowledge can improve and inform machine learning models for chemistry.",
+    "bigIdeas": "My research sits at the intersection of quantum chemistry and machine learning, a space that is abstract. I study how electrons behave, and the physics turns out to govern a large range of real-world phenomena: why drugs bind to targets, how our bodies use iron to carry oxygen, and even why leaves are green. Many effects are quantum mechanical. One idea I most want to communicate is that simulation is a powerful tool, but not a crystal ball. There is a growing tendency in research, industry, and policy to use simulations but forget about the assumptions. As machine learning accelerates what we can predict, we must remember the underlying assumptions. My hope is that future science / scientists can develop a healthy critical eye towards results, asking \"how do we know that the model is right\" rather than just \"what does the model say\". This level of thinking will influence everyone.",
+    "whyHost": "I am genuinely excited about hosting a teacher in my lab, because one of the most underappreciated gaps in science education is what a scientist actually does. Many students and teachers view science as happening at a bench. Computational and theoretical research, although growing in popularity, still remains fairly invisible. Additionally, it is the realm of science that is arguably most accessible to high-school students, as most students are now empowered with computers. A teacher who spends time in my lab will leave with a more accurate picture of science: that bridging disparate fields and looking at existing data can give you new hypotheses. Additionally, I find science to be genuinely exciting. If I can share this excitement with one teacher and they carry it into a classroom, this is likely to have a large multiplicative effect. I want teachers to also get a view point of problem solving, and would like to connect with local teachers to provide targeted opportunities for excited students.",
+    "mentor": "Me! Direct interaction with postdoc Changhwan Oh and grad student Ian Grimm.",
+    "mentoringEnvironment": "My lab provides an unusually broad entry point for visiting teachers, because we are at the intersection of chemistry and machine learning. A teacher with a stronger background in biology or physics will also be able to find a foothold. Because of our diverse interests, STEM teachers need not solely have a chemistry background. We build multiscale models which require math/statistics, our models are rooted in first principles which require physics, and we work on chemical systems. The interdisciplinary work in my group, as well as my passion for teaching others makes my group a great place to learn. I also have a small group because I prefer the direct human-to-human interaction.",
+    "outreach": "Yes. I have been part of many. When I was a graduate student at MIT, I took part in MIT's ACCESS program. I also mentored a student through MIT's MSRP program. At the University of Chicago, I organized a booth at the South Side Science Festival. I am passionate about disseminating knowledge to narrow the gap between K-12 students/educators and university educators.",
+    "newToOutreach": false
+  },
+  {
+    "id": "ankur-mehta",
+    "firstName": "Ankur",
+    "lastName": "Mehta",
+    "title": "",
+    "department": "",
+    "email": "mehtank@ucla.edu",
+    "labUrl": "https://uclalemur.com",
+    "imageId": "",
+    "researchThemes": "Accessibility and democratisation of engineering design, soft and foldable robots, low cost robotics",
+    "dayToDay": "We do hardware, software, and algorithms.  Hardware people build mechanical and electrical systems using 3d printers, laser cutters, soldering irons, and other tools. Software people write code, train machine learning models, and do data analysis.  Algorithms people formulate, solve, and reason about mathematical systems.  They all read and analyze papers, help each other, and generally explore interesting research questions.",
+    "skills": "The most relevant skill would be how to bring in hardware prototyping to create interesting and compelling educational tools targeted to specific course material.  Alongside that would be ways to use computational infrastructure, such as coding and LLMs, to enhance such tools.",
+    "bigIdeas": "Modern education doesn't need expensive, limited, or limiting infrastructure (think iPads, educational robots, etc.) to be compelling: we can enhance the educational experience for a much broader range of students, especially those with the most need and least resources, without indebting us to those who may have less than altruistic intent.",
+    "whyHost": "My core work on printable, accessible robotics has always had as its primary application goal to develop tools and curricula to enhance under-resourced K-12 schooling.  Having a teacher in lab directly helps us interact with and address our primary stakeholders.",
+    "mentor": "Me (Ankur)",
+    "mentoringEnvironment": "The main point is that we (and I) particularly care about education as the end goal; the teacher will be a valued member of our lab.  I intend to work with the teacher myself.",
+    "outreach": "I have held a number of workshops targeted at bringing robotics design and development to K-12 school students.",
+    "newToOutreach": false
+  },
+  {
+    "id": "eunice-jun",
+    "firstName": "Eunice",
+    "lastName": "Jun",
+    "title": "",
+    "department": "",
+    "email": "emjun@ucla.edu",
+    "labUrl": "https://ucla-cdl.org/",
+    "imageId": "",
+    "researchThemes": "human-computer interaction / human-AI interaction; methods and tools for scientific research, discourse, and training/education",
+    "dayToDay": "We work on designing and conducting studies with humans/users, prototyping software systems, and practicing scientific communication about our ongoing work for various audiences.",
+    "skills": "Latest research and methods and tools for AI-driven/computational science.",
+    "bigIdeas": "Our lab is developing new methods and tools for informing and guiding scientific research, discourse, and training. I'm most excited about envisioning what an empowering, human-first future for scientific research could be.",
+    "whyHost": "I would like to engage the HS teacher as a collaborator with whom we can exchange ideas and experiences with scientific training. I am most excited about the prospect to adapt some of our methods and tools for the HS setting as well as learn about that setting's needs to design new methods and tools. In short: I think we would have a lot to learn from each other!",
+    "mentor": "PhD student and PI (me)",
+    "mentoringEnvironment": "We have an interdisciplinary lab where students come from diverse educational backgrounds (e.g., transfer college students, computing and non-computing majors, interests outside of STEM). We actively engage one another and are interested in expanding our perspectives through in-person exchange.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "fabian-rosner",
+    "firstName": "Fabian",
+    "lastName": "Rosner",
+    "title": "",
+    "department": "",
+    "email": "fabianrosner@ucla.edu",
+    "labUrl": "https://www.react-lab.org/",
+    "imageId": "",
+    "researchThemes": "Decarbonization, Carbon capture, electrochemistry, critical metals",
+    "dayToDay": "experiments and simulations, mineral extraction, electrochemical metal recovery, electrochemical alkalinity generation, process design and techno-economic evaluation",
+    "skills": "participate in experimental design, execution, underpinning theory, operation of analytical instruments, economics",
+    "bigIdeas": "To decarbonize hard-to-abate chemical sectors such as steel and cement, electrochemistry is a paradigm shift of how we think about manufacturing",
+    "whyHost": "As researchers we need to communicate better what research is and how to participate in it. Teachers are a key link here.",
+    "mentor": "staff, postdocs, Ph.D. students",
+    "mentoringEnvironment": "We can provide lots of hands-on experience and our theories are very applied so that even someone who is not already an expert can contribute to the work we are doing.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "guy-van-den-broeck",
+    "firstName": "Guy",
+    "lastName": "Van den Broeck",
+    "title": "",
+    "department": "",
+    "email": "guyvdb@cs.ucla.edu",
+    "labUrl": "https://starai.cs.ucla.edu/",
+    "imageId": "",
+    "researchThemes": "Neurosymbolic AI and control of large language models",
+    "dayToDay": "Whiteboard math discussions, machine learning experiments",
+    "skills": "Working through research problems in generative AI",
+    "bigIdeas": "How the rules of probability help us understand modern AI.",
+    "whyHost": "It would be beneficial to the students' outreach efforts.",
+    "mentor": "Me and my PhD students.",
+    "mentoringEnvironment": "We have a very collaborative environment where people freely discuss research.",
+    "outreach": "We have been involved with teaching K-12 students.",
+    "newToOutreach": false
+  },
+  {
+    "id": "henry-burton",
+    "firstName": "Henry",
+    "lastName": "Burton",
+    "title": "",
+    "department": "",
+    "email": "hvburton@g.ucla.edu",
+    "labUrl": "https://scholar.google.com/citations?user=zzq6IZYAAAAJ&hl=en&authuser=2",
+    "imageId": "",
+    "researchThemes": "Our research focuses on understanding how natural hazards, including earthquakes, hurricanes, and wildfires, affect buildings, infrastructure, and communities. We combine engineering simulations, artificial intelligence, data science, and social science to predict disaster impacts, evaluate strategies for reducing risk, and improve the resilience and recovery of communities, particularly those that are disproportionately vulnerable.",
+    "dayToDay": "Our researchers develop computer models to simulate how buildings, bridges, and communities respond to natural disasters, analyze data collected following past disasters, and use machine learning to identify patterns and improve predictions. They also investigate how social and economic factors influence disaster impacts and recovery, working with datasets that include satellite imagery, engineering assessments, and community characteristics. Much of our work involves computer programming, statistical analysis, visualization, and collaborative problem-solving.",
+    "skills": "Teachers would gain hands-on experience with computational modeling, data analysis, visualization, and the application of artificial intelligence to real-world engineering problems. Depending on their interests and background, they could learn to use Python, analyze earthquake or hurricane damage datasets, explore machine learning methods, and create maps illustrating how disaster risks vary across communities. They would also develop experience interpreting scientific results, communicating uncertainty, and translating engineering research into engaging, age-appropriate STEM classroom activities.",
+    "bigIdeas": "One of the most important ideas we hope to communicate is that disasters are not simply unavoidable consequences of extreme natural events. Engineering design, infrastructure investments, community planning, and public policy can substantially influence their consequences. Our research demonstrates how mathematical modeling, data science, and artificial intelligence can help us anticipate disaster impacts, identify vulnerable populations, and evaluate strategies for reducing damage and accelerating recovery.  We also want students and the public to recognize that engineering is about more than designing structures to withstand extreme forces. It is about protecting lives, maintaining essential services, and ensuring that communities can recover from disasters. By making these connections, we hope to inspire future engineers and scientists while providing decision-makers with evidence to support more effective and equitable investments in disaster resilience.",
+    "whyHost": "Hosting a secondary STEM teacher would provide an opportunity to make our research more accessible to younger students and strengthen connections between university research and K–12 education. Natural hazards engineering offers particularly engaging opportunities for classroom learning because students can connect scientific and mathematical concepts to real-world events that affect their communities.  We are especially interested in collaborating with a teacher to identify aspects of our research that can be translated into classroom activities involving data analysis, computational thinking, engineering design, and problem-solving. We also view this as a two-way learning opportunity: the teacher would gain exposure to current research, while our team would benefit from the teacher's expertise in communicating complex ideas and engaging diverse learners.",
+    "mentor": "",
+    "mentoringEnvironment": "Our lab provides an interdisciplinary and collaborative research environment where engineering, mathematics, computer science, and social science come together to address important societal challenges. Our projects offer opportunities for participants with different technical backgrounds to make meaningful contributions, particularly through data analysis, visualization, and computational modeling.\n\nAs a faculty member, I have extensive experience mentoring undergraduate and graduate researchers, including students who are encountering research methods for the first time. We emphasize structured guidance, regular feedback, independent problem-solving, and clear communication of research findings. For a participating teacher, we would develop a manageable eight-week project with clearly defined objectives, close graduate student mentorship, and opportunities to connect the research experience to classroom instruction.",
+    "outreach": "I have participated in K-12 outreach as a graduate (PhD) student. I worked with one high school student over the course of a summer",
+    "newToOutreach": true
+  },
+  {
+    "id": "ida-su",
+    "firstName": "Ida",
+    "lastName": "Su",
+    "title": "",
+    "department": "",
+    "email": "idasu@ucla.edu",
+    "labUrl": "https://www.sulab.seas.ucla.edu/",
+    "imageId": "",
+    "researchThemes": "Our lab develops innovative nanotechnologies to engineer the immune system for treating human diseases, including cancer and autoimmune disorders. We combine nanotechnology, synthetic biology, and immunology to develop targeted delivery systems that reprogram immune cells directly inside the body, with the goal of creating safer, more effective, and accessible therapies.",
+    "dayToDay": "Our lab members design and manufacture nanoparticles, engineer immune cells, and conduct experiments to investigate how these technologies can improve disease treatment. Their daily activities include molecular cloning, nanoparticle formulation and characterization, cell culture, microscopy, and flow cytometry to evaluate immune cell responses. We also regularly analyze experimental data, discuss scientific literature, and collaborate to develop new research ideas and solve challenging scientific problems.",
+    "skills": "Teachers would gain hands-on experience in interdisciplinary research at the intersection of chemical engineering, nanotechnology, and biomedical science. Depending on their interests and experience, they could learn fundamental laboratory techniques such as pipetting, nanoparticle formulation and characterization, cell culture, microscopy, and data analysis. They would also develop skills in experimental design, hypothesis testing, troubleshooting, scientific communication, and critical thinking. Importantly, teachers would learn how to translate advanced scientific concepts into engaging, hands-on learning activities that could be adapted for high school STEM classrooms.",
+    "bigIdeas": "I would like to communicate how engineering principles can be applied to solve important challenges in medicine, particularly by harnessing the body's own immune system to fight diseases. Our research demonstrates how combining concepts from chemistry, biology, physics, and engineering can lead to innovative therapeutic strategies, such as nanoparticles that selectively deliver genetic instructions to immune cells.  For high school students, I hope our work will illustrate the interdisciplinary nature of modern science and inspire curiosity about how fundamental STEM concepts can be translated into real-world applications. For the general public, I would like to highlight the potential of nanotechnology and immune engineering to enable more precise, effective, and accessible treatments for cancer and autoimmune diseases. For policymakers, I hope to emphasize the importance of sustained investment in fundamental research, interdisciplinary innovation, and STEM education to advance human health and train the next generation of scientists and engineers.",
+    "whyHost": "I am passionate about STEM education and mentoring the next generation of scientists and engineers. Hosting a STEM teacher would provide a meaningful opportunity to bridge cutting-edge academic research and classroom education, allowing scientific discoveries made in our lab to reach and inspire a broader audience of young students.  I would be excited to share our research approaches and scientific problem-solving processes with a teacher while learning from their expertise in education and student engagement. Through this experience, I hope to help develop accessible and engaging educational activities that demonstrate how engineering and science can address real-world challenges in human health. I also see this as an opportunity to establish a lasting partnership between our lab and local schools to inspire students from diverse backgrounds to pursue STEM careers.",
+    "mentor": "The PI (Dr. Ida Su), with additional day-to-day guidance from a designated lab member.",
+    "mentoringEnvironment": "Our lab provides a supportive, collaborative, and interdisciplinary research environment that emphasizes hands-on learning, scientific curiosity, creativity, and professional development. As an Assistant Professor at UCLA, I am deeply committed to mentoring individuals from diverse educational backgrounds and helping them develop confidence in scientific research.\n\nOur research integrates chemistry, biology, engineering, and medicine, offering numerous opportunities to connect fundamental STEM concepts with exciting real-world applications. We emphasize personalized mentoring, regular scientific discussions, critical thinking, and open communication. Teachers would receive structured guidance, opportunities to participate in meaningful research activities, and support in developing educational materials that translate their laboratory experiences into engaging classroom lessons.\n\nI believe that effective mentorship is a two-way learning process. While our lab would provide teachers with exposure to advanced scientific research, we would also value their expertise in education and learn how to communicate our research more effectively to younger audiences. My goal is to create a welcoming environment where teachers feel empowered to ask questions, explore new ideas, and bring their research experiences back to their students.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "jennifer-jay",
+    "firstName": "Jennifer",
+    "lastName": "Jay",
+    "title": "",
+    "department": "",
+    "email": "jennyjay@ucla.edu",
+    "labUrl": "https://jaylabucla.org/",
+    "imageId": "1asFKlJeCndDa0fLxaqvlf3NniA29Z3E5",
+    "researchThemes": "Generally, we study pollutant fate and transport in the environment.  Current areas of focus are: 1) dissemination of antibiotic resistant bacteria from industrial agriculture; 2) impacts of wildfires on water quality and harmful algal blooms in the coastal ocean; and 3) lead in urban soils.",
+    "dayToDay": "We collect field samples and analyze them by both culture- and DNA-based methods.  Culture-based work involves making Petri dishes, spreading samples on the plates and counting them, purifying strains and testing them for growth in the presence of antibiotics.  DNA-based work involves DNA extraction, conventional and quantitative PCR, and metagenomic analysis.",
+    "skills": "Field collection, basic water quality analysis, culturing of microbes, and DNA extraction.",
+    "bigIdeas": "Engagement with communities leads to research that can directly impact community members' ability to protect their environment.",
+    "whyHost": "I have really enjoyed working with middle school teachers in the past, and I feel like it would be exciting and fun to have a teacher or two in the lab in the summer.  The whole lab would benefit from their curiosity and energy. Also, I am personally interested in K-12 education and feel I have a lot to learn from K-12 teachers.",
+    "mentor": "I would.",
+    "mentoringEnvironment": "In my lab, researchers are involved in the whole process of developing research questions in collaboration with community groups, collecting samples, analyzing them, mapping the results with GIS, and conducting spatial analysis. Many of the techniques we apply are very accessible, and for students who want to go deeper, we also offer more detailed DNA-based analysis. Our results are of general interest to communities, which students find fulfilling.  Just this week, our work with a community group was written up: https://www.thenewlede.org/2026/10/wisconsin-cafos-antibiotic-resistance-dairies/.",
+    "outreach": "Yes, for most of my years at UCLA, I have worked with St. Anne school in Santa Monica, a school with limited resources and 75% of the students qualifying for free hot lunch.  Students in my courses work in small groups with the middle schoolers to develop research questions about beach sand and water quality, and then students collect and analyze samples.  The project culminates in a poster session at UCLA.  We haven't had funding to restart since covid, but I just got a new Sea Grant award that includes this project, so it will be starting again.",
+    "newToOutreach": false
+  },
+  {
+    "id": "joseph-peterson",
+    "firstName": "Joseph",
+    "lastName": "Peterson",
+    "title": "",
+    "department": "",
+    "email": "jdp3@ucla.edu",
+    "labUrl": "https://sites.google.com/view/complexfluidsprocessing/home",
+    "imageId": "",
+    "researchThemes": "We study the flow behavior of liquids that have some solid-like properties.  We think about model building, material characterization, and processing instabilities.",
+    "dayToDay": "We do a lot of math and programming day-to-day",
+    "skills": "Depending on the project and your interests, you could learn things like tensor calculus, frame invariants, linear stability, functional analysis, signal processing, and CFD simulation.",
+    "bigIdeas": "Plastics are so important to our modern world, but we often associate the word \"plastic\" with \"cheap trash\".  I think if we develop an appreciation for the amazing engineering of how plastics are manufactured/processed, it helps cultivate a willingness to be more responsible with how we use them.",
+    "whyHost": "I am passionate about education.  I think that a motivated teacher can learn a lot through this experience - and carry that back to their students in future years.  I also think that UCLA faculty can learn a lot from high school teachers, who have more direct contact-hours in the classroom and a lot of insights about the strengths and growth opportunities for our incoming students.",
+    "mentor": "A mix of myself and a PhD student in my group",
+    "mentoringEnvironment": "The research we do can be taken anywhere.  You don't need fancy equipment, just a laptop and pen/paper.  The research can also be scaled down to hands-on projects/experiments for high school science clubs.",
+    "outreach": "I have worked with MAP at UCLA teaching a computer literacy course.",
+    "newToOutreach": false
+  },
+  {
+    "id": "jun-chen",
+    "firstName": "Jun",
+    "lastName": "Chen",
+    "title": "",
+    "department": "",
+    "email": "jun.chen@ucla.edu",
+    "labUrl": "https://www.junchenlab.com/",
+    "imageId": "1mnA5du26M0PsQmX9_3oewfQM-btJcuPD",
+    "researchThemes": "Our lab focuses on soft materials innovation for bioelectronics, with an emphasis on the design, synthesis, and engineering of functional soft materials for next-generation wearable and biomedical devices. We aim to bridge materials science, engineering, and biology to develop innovative bioelectronic technologies that seamlessly interface with the human body for health monitoring and biomedical applications.",
+    "dayToDay": "Researchers in our lab design, synthesize, and characterize innovative soft materials, including functional polymers and hydrogels, for applications in wearable and bioelectronic devices. Their daily activities involve hands-on experiments, materials fabrication, mechanical and electrical testing, device prototyping, and data analysis to understand and optimize material properties and device performance. Lab members also collaborate across disciplines, discuss research findings, and develop creative solutions to challenges at the intersection of materials science, engineering, and biology.",
+    "skills": "Teachers working in our lab will gain hands-on experience in materials science and bioengineering, including the preparation and characterization of soft functional materials, such as polymers and hydrogels, and the fabrication of simple flexible electronic devices and wearable sensors. They will learn fundamental laboratory techniques, experimental design, mechanical and electrical testing, data collection, and scientific analysis. Through close mentorship by graduate students, teachers will also develop skills in scientific problem-solving, interdisciplinary collaboration, and communicating research findings. Importantly, they will explore ways to translate these research experiences into engaging, accessible STEM activities that connect materials science, chemistry, physics, and engineering to real-world biomedical applications in their high school classrooms.",
+    "bigIdeas": "Our lab aims to communicate how innovations in soft materials can transform healthcare by enabling next-generation bioelectronic technologies that are flexible, comfortable, and capable of seamlessly interfacing with the human body. By integrating materials science, chemistry, engineering, and biology, we seek to develop wearable sensors and biomedical devices that could enable continuous health monitoring, earlier disease detection, and more personalized healthcare. We also want to demonstrate that scientific breakthroughs often emerge from interdisciplinary collaboration, creativity, and curiosity. For high school students, our research provides an exciting opportunity to connect fundamental STEM concepts with tangible, real-world applications, inspiring the next generation of scientists and engineers. For the broader public and policymakers, we hope to highlight the importance of investing in fundamental materials research, interdisciplinary innovation, and accessible STEM education to advance healthcare technologies, improve quality of life, and create long-term societal benefits.",
+    "whyHost": "I have a strong passion for teaching and mentoring, and I find great fulfillment in sharing the excitement of scientific discovery with others. Hosting a high school teacher in my lab would provide a meaningful opportunity to bridge cutting-edge research and STEM education, making materials science and bioelectronics more accessible and engaging for younger generations. I am particularly excited about introducing teachers to hands-on research experiences that they can bring back to their classrooms, inspiring students to explore science, engineering, and innovation. I also believe this experience would foster valuable two-way learning, allowing our lab members to gain fresh perspectives, strengthen their science communication and mentorship skills, and better understand how to connect advanced research concepts with high school education. Ultimately, I see this opportunity as a way to extend the impact of our research beyond the laboratory while nurturing curiosity and enthusiasm for STEM among future generations.",
+    "mentor": "The teacher would be mentored by a senior graduate student in my lab with expertise in soft materials and bioelectronics, under my direct supervision. The graduate student would provide hands-on guidance in laboratory techniques, experimental design, materials fabrication, and data analysis, while I would offer additional scientific mentorship and support to ensure a meaningful and engaging research experience. We would work together to tailor the project to the teacher’s interests and background.",
+    "mentoringEnvironment": "My passion for teaching and mentoring is central to the culture I aim to foster in my lab. I believe that research should be an inclusive, collaborative, and intellectually stimulating experience where individuals from diverse backgrounds feel encouraged to ask questions, explore new ideas, and develop confidence in their scientific abilities. Our lab's interdisciplinary research in soft materials and bioelectronics provides an ideal environment for STEM teachers to connect fundamental concepts in chemistry, physics, biology, and engineering with exciting real-world applications, such as wearable health sensors and biomedical technologies. We emphasize hands-on learning, creativity, critical thinking, and scientific problem-solving, with personalized guidance from both graduate student mentors and myself. Importantly, I value the unique perspectives and teaching expertise that secondary educators bring, and I view this opportunity as a two-way learning experience. Beyond introducing teachers to cutting-edge research, we would work collaboratively to translate laboratory discoveries into accessible, engaging classroom activities that inspire high school students to pursue STEM. My ultimate goal is to create a welcoming and supportive experience that empowers teachers to return to their classrooms with new scientific knowledge, practical skills, and renewed enthusiasm for teaching science.",
+    "outreach": "Yes. I am passionate about STEM outreach and have actively engaged with local K–12 schools in the Los Angeles area to inspire younger students to explore careers in science and engineering, with a particular emphasis on broadening participation among students from underrepresented backgrounds. Over the past three years, I have developed a strong relationship with Ribet Academy, a local K–12 school with a diverse student body, where I have delivered interactive presentations introducing students of different ages to advanced materials science, soft materials, and emerging bioelectronic technologies. Through these activities, I aim to make cutting-edge research accessible and exciting while helping students, particularly young women, build confidence in their abilities to pursue STEM careers. I am also interested in expanding these efforts through laboratory tours, hands-on demonstrations, and partnerships with additional local high schools, including Ulysses S. Grant High School and Inglewood High School. These experiences have strengthened my commitment to connecting university research with K–12 education, and I see the EnCorps–Keck Foundation program as an exciting opportunity to deepen this engagement by working directly with teachers who can bring authentic research experiences and scientific inspiration back to their classrooms.",
+    "newToOutreach": false
+  },
+  {
+    "id": "jun-park",
+    "firstName": "Jun",
+    "lastName": "Park",
+    "title": "",
+    "department": "",
+    "email": "jop@ucla.edu",
+    "labUrl": "https://parklab.ucla.edu",
+    "imageId": "1Ucrt_xWtZGwDrNhqeoACIMdodV6hQBxl",
+    "researchThemes": "The main research theme of my lab is metabolism. Our goal is to understand and engineer metabolism in microbes and in humans.",
+    "dayToDay": "People in my lab culture cells, extract metabolites, and analyze metabolites using mass spectrometry. They also collaborate with other researchers to solve problems involving metabolism. The areas of research include bioproduct synthesis, metabolic diseases, aging, etc.",
+    "skills": "Mass spectrometry, cell culture, microscopy, metabolic modeling",
+    "bigIdeas": "Metabolism drives every single living cell in our body and on earth. Understanding how it works and engineering it would benefit individual and global health.",
+    "whyHost": "I would like our research to have far-reaching impacts and future researchers to solve challenging problems in our field.",
+    "mentor": "A postdoctoral scholar or a senior graduate student in my group",
+    "mentoringEnvironment": "My lab uses both experimental and computational tools to solve challenging problems in energy, medicine, and environment. STEM secondary teachers would benefit from the breadth and depth of knowledge in our lab.",
+    "outreach": "I am the faculty advisor for the UCLA AIChE chapter that carries out extensive outreach programs. I have also participated in the CityLab student group that invites K-12 students to campus for lab tours and demonstrations.",
+    "newToOutreach": false
+  },
+  {
+    "id": "kyle-yoshida",
+    "firstName": "Kyle",
+    "lastName": "Yoshida",
+    "title": "",
+    "department": "",
+    "email": "kyleyoshida@ucla.edu",
+    "labUrl": "https://www.mohalalab.org/",
+    "imageId": "1uLlVEz3de2yO_1wk5e5db8olMPnx2_if",
+    "researchThemes": "The MOHALA Lab (Mechatronics for Outreach, Haptics, Agriculture, and Living Applications) at UCLA develops robotic and mechatronic technologies that improve how humans interact with technology and the world around them. Our research spans soft robotics, haptics (the science of touch), wearable technologies, human-centered engineering, health, and agricultural robotics, with an emphasis on accessible, low-cost technologies that address real-world challenges.",
+    "dayToDay": "Our researchers design, build, program, and test robotic systems and interactive technologies to address real-world challenges. Daily activities include 3D modeling and printing, electronics assembly, programming, experimental testing, data analysis, and collaborative problem-solving. Much of our research in haptics and soft robotics uses relatively inexpensive materials and accessible fabrication techniques, allowing researchers at all experience levels to contribute meaningfully to projects.",
+    "skills": "Teachers would gain hands-on experience in engineering design, soft robotics, haptics, 3D modeling (CAD), 3D printing, laser cutting, electronics, sensors, and basic programming using tools such as Arduino and MATLAB. They would also learn how to formulate research questions, design experiments, collect and analyze data, and communicate scientific findings.  A particular strength of our research is that haptics and soft robotics have a relatively low barrier to entry. Many projects can be developed using inexpensive materials, simple electronics, and accessible fabrication methods, making them well-suited for K–12 classrooms. Teachers would not only participate in authentic research but also gain practical skills and develop activities that they can directly implement in their own courses, allowing their students to engage with the same engineering principles and research questions explored in our lab.",
+    "bigIdeas": "Our work is accessible, affordable, and community-driven. Haptics and soft robotics have relatively low barriers to entry, enabling students and teachers to develop meaningful technologies addressing localized challenges, such as crop-specific agricultural robots or personalized stroke rehabilitation devices. A recently funded project by the Burroughs Wellcome Fund showcases this work, in which I am co-designing environmental sensors and robots with students and teachers throughout Hawaii. As physical AI advances, I envision a distributed model of innovation where schools and communities become active contributors to technological development. By empowering the next generation to create physical robotics solutions for their own communities, we can expand participation in STEM, accelerate innovation, and strengthen local and national economies.",
+    "whyHost": "I am interested in hosting a teacher to bridge university research and K–12 education, empowering educators to bring authentic engineering research into their classrooms. Haptics and soft robotics are particularly well-suited for this purpose, as meaningful projects can be conducted using inexpensive materials and accessible tools. Currently, I mentor a few high schoolers in Hawaiʻi and often communicate with teachers eager to develop technical skills to better support their students. Hosting a teacher and participating in the RET vision at UCLA would let me directly address this need while gaining valuable classroom perspectives that can strengthen my research, teaching, and broader educational outreach.",
+    "mentor": "The teacher would receive shared mentorship from one of my graduate students (Luke Sage) and me. Luke and all graduate students would provide day-to-day technical guidance, including circuit design, prototyping, and experimental methods, while I would oversee the research project through regular meetings. Notably, Luke has extensive experience in this role, having served as a TA for Introduction to MATLAB and CAD. Furthermore, he has industry experience from before starting his PhD, so he will bring industry knowledge to our learning environment. Additionally, through my involvement with the University of Hawaiʻi Faculty Fellows Program, which trains faculty to collaborate with teachers and community organizations, I hope to connect the teacher with educators and community organizers in my network. These connections would provide additional mentorship and opportunities to learn effective strategies for translating university research and engineering skills into K–12 classrooms.",
+    "mentoringEnvironment": "The MOHALA Lab combines hands-on engineering research, interdisciplinary collaboration, and a strong commitment to education and outreach. Our research in haptics and soft robotics is particularly well-suited for teachers because it has a relatively low barrier to entry, allowing participants to quickly move from learning fundamental concepts to designing, building, and testing functional prototypes. Many of these activities can be replicated in secondary school classrooms using inexpensive and readily available materials.\n\nAs a faculty member teaching introductory engineering courses, I have extensive experience introducing technical concepts to students with limited engineering backgrounds. I also have substantial experience working directly with high school teachers through Honua Scholars, a nonprofit I developed 6 years ago, where I collaborate with educators to support student research and develop meaningful STEM learning opportunities.\n\nOur lab would provide teachers with individualized mentorship, access to university research facilities, and opportunities to participate in ongoing projects. Importantly, we would emphasize translating their research experiences into practical classroom activities, ensuring the program's benefits extend beyond the individual teacher to their students and school communities.",
+    "outreach": "I have extensive experience working with high school students and teachers through Honua Scholars, a nonprofit organization I founded as a graduate student (in 2020) to support student research, mentorship, and STEM engagement. Our organization reaches over 1,000 students, teachers, and parents annually through events, conferences, and competitions, with a network spanning more than 40 institutions across Hawaiʻi.\n\nOur signature initiatives include an annual statewide research proposal competition and symposium. Each year, over 100 students from more than 30 schools submit research proposals, and we work directly with students, teachers, and community partners to provide mentorship throughout the research process. Most recently (November 2026), I organized our annual Honua Scholars Symposium, bringing together approximately 150 students, teachers, researchers, and community members to showcase student research and strengthen connections between K–12 and higher education.\n\nMy lab and I also directly mentor high school research teams, and we are preparing to work with 2–4 teams on projects involving haptics, soft robotics, and agricultural technologies in the coming month. Our high school students have gone on to publish their research and win national and international competitions. These experiences involve close collaboration with teachers to support students in developing research questions, designing experiments, building prototypes, and communicating their findings.\n\nAt UCLA, I am also expanding outreach through my lab. Supported by the Stacey Nicholas Early Career Award, we will launch monthly hands-on engineering workshops for students and community members beginning in January. In addition to these outreach events, we also host laboratory open houses, with our most recent fall event attracting over 250 participants.\n\nCollectively, these experiences reflect my commitment to building sustainable partnerships with K–12 educators and creating authentic research opportunities that teachers can bring directly into their classrooms.",
+    "newToOutreach": false
+  },
+  {
+    "id": "lara-dolecek",
+    "firstName": "Lara",
+    "lastName": "Dolecek",
+    "title": "",
+    "department": "",
+    "email": "dolecek@ee.ucla.edu",
+    "labUrl": "https://loris.seas.ucla.edu/",
+    "imageId": "",
+    "researchThemes": "Mathematical methods that help make modern data storage and computing robust",
+    "dayToDay": "Design new methods and algorithms;  run numerical experiments",
+    "skills": "How to apply high school math knowledge to interesting problems in modern engineering systems",
+    "bigIdeas": "I would like to convey how fundamental mathematical research enables technologies we rely on every day, from reliable data storage to wireless communications. I hope to inspire future researchers by demonstrating the excitement of discovery, while highlighting to the public and policymakers the importance of investing in fundamental research and STEM education.",
+    "whyHost": "I have a personal passion for K-12 education",
+    "mentor": "To be determined",
+    "mentoringEnvironment": "My lab combines rigorous mathematical research with practical engineering applications in a collaborative and supportive environment. My extensive experience in teaching, mentoring, and K–12 STEM outreach enables me to make advanced research accessible and help teachers translate their experiences into engaging classroom activities.",
+    "outreach": "I have participated in several related programs:  co-organized LACC for over a decade; COSMOS summer instructor; instructor volunteer with ORMC (UCLA Math Circle), among other efforts.",
+    "newToOutreach": false
+  },
+  {
+    "id": "liang-gao",
+    "firstName": "Liang",
+    "lastName": "Gao",
+    "title": "",
+    "department": "",
+    "email": "gaol@ucla.edu",
+    "labUrl": "https://www.iopticslab.seas.ucla.edu/",
+    "imageId": "11t9WzMSEiImZ6XIPHhy4TX55hx6vfLGJ",
+    "researchThemes": "We build microscopes that turn hidden events inside living tissue into movies—from blood rushing through tiny vessels to nerve cells sending signals. By combining light, cameras, and computer tools, we help scientists watch life in 3D and study changes linked to disease.",
+    "dayToDay": "A typical day mixes building, experimenting, and discovery: we assemble lenses and cameras, test new microscopes, and record images of cells and tissues. We use computer programs to turn those images into clear pictures and movies, then ask what they reveal about how living systems work. Team members compare results, troubleshoot together, and plan the next experiment.",
+    "skills": "A teacher could learn how lenses form images, how to use a microscope and camera, and how to turn a scientific question into a simple experiment. They could practice measuring features in images, making graphs, interpreting results, and explaining discoveries through pictures and short videos. We would tailor the project to the teacher's interests and experience, with step-by-step guidance and opportunities to develop classroom activities using light, lenses, and real research images.",
+    "bigIdeas": "Seeing something new can change the questions we are able to ask. Our microscopes help researchers explore how nerve cells communicate, how blood moves, and how cells use energy—knowledge that could contribute to better ways to understand disease and evaluate treatments. We also want students to see that scientific discovery draws on many strengths: curiosity, creativity, building things, working with numbers, and collaborating with others. A key message for the public and policymakers is that investing in new scientific tools can open doors to discoveries we cannot yet predict.",
+    "whyHost": "A teacher can bring the excitement of one summer in a research lab to many classrooms for years to come. I would love to help a teacher experience the moment when an image reveals something they have never seen before, then work together to turn that excitement into lessons their students can explore. I also hope to learn from the teacher's expertise in making difficult ideas approachable and welcoming students with different interests and levels of confidence.",
+    "mentor": "A graduate student in the iOptics Lab, to be selected based on the teacher's interests and project, with guidance from Professor Liang Gao.",
+    "mentoringEnvironment": "Our work offers a natural meeting point for physics, biology, engineering, and computing, with colorful images and movies that make abstract ideas tangible. I teach medical imaging and microscopy at UCLA and have mentored researchers from the undergraduate through postdoctoral levels, including students in summer research programs. For a teacher, we would build an achievable project around their interests, start with the basics, and provide hands-on guidance from a graduate mentor and regular conversations with me. We would make room for questions, trial and error, and reflection, while treating the teacher as a partner whose classroom expertise strengthens our team.",
+    "outreach": "My outreach and research mentoring experience includes UCLA's Amazon Summer Undergraduate Research Experience (SURE) program in 2024 and UCLA Engineering's Summer Undergraduate Research Program (SURP) in 2024 and 2025. Through these programs, I have helped undergraduate students gain hands-on research experience, build confidence, and explore paths into graduate study and scientific careers. I would welcome the opportunity to extend this work by partnering with a secondary STEM teacher and connecting our research with their classroom.",
+    "newToOutreach": false
+  },
+  {
+    "id": "liz-izhikevich",
+    "firstName": "Liz",
+    "lastName": "Izhikevich",
+    "title": "",
+    "department": "",
+    "email": "lizhikev@ucla.edu",
+    "labUrl": "https://ucla-scan.github.io/",
+    "imageId": "",
+    "researchThemes": "Our research brings a data-driven approach to understanding the Internet’s performance and security, both on the ground and in space. We build systems that learn patterns and collect data about network, operator, and attacker behaviors.",
+    "dayToDay": "People in the lab primarily conduct research through coding at their computers. Projects are often team based, so teams meet a couple days a week to set direction and share results.",
+    "skills": "Data Analysis; AI-Driven Research; Internet Security",
+    "bigIdeas": "Internet Security is more critical than ever in this AI-Agentic world. To stop attacks, we must build data-collecting systems to see the attacks. AI moves fast, so we have to build and adapt fast.",
+    "whyHost": "I would love to share best Internet Security practices with the teacher and have them inspire the next generation of students.",
+    "mentor": "My post-doc Ben Du. At least one other PhD student should be around.",
+    "mentoringEnvironment": "1. We work on a very applied problem: Internet security! This is something that everyone thinks about and is concerned with and a great problem to work on. 2. My lab studies teaching and pedagogy (we have TLC grants that support this), so the mentoring opportunity is another way for us to understand best research pedagogy practices.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "mani-srivastava",
+    "firstName": "Mani",
+    "lastName": "Srivastava",
+    "title": "",
+    "department": "",
+    "email": "mbs@ee.ucla.edu",
+    "labUrl": "https://www.nesl.ucla.edu/",
+    "imageId": "",
+    "researchThemes": "My lab studies Physical AI: how networked computers can sense, understand, and interact with the physical world. We combine sensors, wireless communication, embedded computing, and machine learning to build reliable, energy-efficient, secure, and privacy-aware systems for applications such as health, smart environments, and autonomous systems.",
+    "dayToDay": "People in our lab formulate research questions, design algorithms and systems, and build prototypes using sensors, small computers, and AI models. They collect or analyze data, run experiments and simulations, and investigate why a system succeeds in some conditions and fails in others. Much of the work involves programming, interpreting results, discussing ideas, and communicating findings through papers, presentations, and demonstrations.",
+    "skills": "A teacher could learn how to turn a real-world question into a testable investigation using sensors and data. Depending on their interests and experience, this could include visualizing data, using Python notebooks, comparing simple machine-learning methods, and testing how noise, missing measurements, or limited computing resources affect results. They would also gain experience interpreting uncertainty, recognizing the limitations of AI, and translating research into a classroom activity and a short public-facing video.",
+    "bigIdeas": "I would like to communicate how AI connects to the physical world through sensors, computers, and networks, and why making these systems useful requires more than an accurate model. Reliability, energy use, privacy, security, and the consequences of mistakes all matter. This research can contribute to better health monitoring, more efficient buildings and infrastructure, and safer autonomous systems. For students and the public, an important message is that engineering involves asking good questions, testing assumptions, learning from failures, and weighing tradeoffs. For policymakers, it is important to understand both the opportunities and the limits of these technologies.",
+    "whyHost": "I would like to help a teacher experience how research ideas develop through experimentation and bring that perspective back to their students. Sensors and AI offer accessible connections among computing, physics, mathematics, and everyday life, and they provide opportunities to examine both technological possibilities and limitations. I would also value the teacher’s perspective on how to explain our research clearly and turn it into meaningful learning experiences for secondary-school students.",
+    "mentor": "A PhD student in my lab, potentially with additional guidance from my postdoc, Dr. Kang Yang. The specific mentor would be selected based on the teacher’s interests and the project.",
+    "mentoringEnvironment": "Our lab brings together students and researchers working across sensing, computing, networking, and AI, offering a teacher exposure to several connected areas of engineering. The work can be organized around a manageable question with visible, interpretable results, rather than requiring a large new system or advanced AI expertise at the outset. My experience teaching foundational and advanced engineering courses, together with our long-running involvement in the Los Angeles Computing Circle, provides a basis for adapting research ideas to different backgrounds. We would aim to give the teacher a supportive setting for asking questions, trying ideas, and developing materials that connect the research to their classroom.",
+    "outreach": "I co-founded the Los Angeles Computing Circle (LACC) (https://sites.google.com/site/computingcircle/home) in 2011 as part of a large NSF project and helped run it for 15 years. The program engaged and mentored students interested in computing and engineering, offering incoming students in grades 10–12 lectures and hands-on design and programming laboratories on advanced computing concepts. We recently decided to discontinue the program, but that experience has shaped my interest in making research accessible to younger students and supporting the educators who work with them.",
+    "newToOutreach": false
+  },
+  {
+    "id": "md-shafayat-hossain",
+    "firstName": "Md Shafayat",
+    "lastName": "Hossain",
+    "title": "",
+    "department": "",
+    "email": "shossain@seas.ucla.edu",
+    "labUrl": "https://msh-qmind.framer.website/",
+    "imageId": "1lSb4RsxW2Cma_4A4L1DyhwhI4i06vpQ-",
+    "researchThemes": "My lab discovers new quantum states of matter in topological and correlated materials and turns them into technologies for quantum sensing and energy-efficient electronics.",
+    "dayToDay": "On a typical day, lab members build nanoscale devices and image quantum materials atom by atom with scanning tunneling microscopy. They probe these materials with light and electrical measurements at low temperatures. They analyze the data with AI-assisted tools and take their experiments to national laboratories and high-magnetic-field facilities.",
+    "skills": "A K-12 teacher would learn lab safety, sample preparation, optical microscopy, electrical and optoelectronic measurements (Scanning tunneling microscopy and scanning photocurrent microscopy), and data analysis. They would also leave with hands-on magnetism and superconductivity demonstrations ready to use in their classrooms.",
+    "bigIdeas": "My lab has shown that quantum effects once thought possible only near absolute zero can survive at room temperature. One example is the edge channels of the topological insulator Bi₄Br₄, which carry current without backscattering and point to electronics that waste far less energy. That matters because U.S. data centers used about 4.4% of the nation’s electricity in 2023 and could use up to 12% by 2028 (Lawrence Berkeley National Laboratory, 2024). For high school students, the message is that a crystal grown in a lab can settle questions that are decades old, as our discovery of a topological excitonic insulator did for one first posed in the 1960s. For the public and policymakers, the message is that sustained investment in quantum materials pays off in low-power AI hardware, radiation-tolerant sensors for fusion energy and national security, and a skilled semiconductor workforce, at a time when industry projects about 67,000 unfilled U.S. jobs by 2030 (Semiconductor Industry Association, 2023).",
+    "whyHost": "A single teacher reaches about 150 students a year and thousands over a career, so one summer in my lab can carry quantum science into far more classrooms than my group ever could on its own. I want a teacher to leave with real data they measured themselves and a superconducting levitation and magnetism lesson ready for the classroom, so Los Angeles students meet quantum technology before they choose their careers. I have run professional-development programs for K–12 teachers before, and hosting a teacher in my lab is the most direct way to continue that work.",
+    "mentor": "I will mentor the teacher directly. Senior Ph.D. students Eric Yeh and Pochang Chen, who are experienced with our optical and electrical measurements, will provide hands-on guidance daily.",
+    "mentoringEnvironment": "I have mentored more than forty researchers, from undergraduates to students now working as professors, and I have designed professional-development programs for K–12 teachers. Our experiments are visual and hands-on, so a teacher can collect real research data within weeks and turn it into classroom lessons.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "mekonnen-gebremichael",
+    "firstName": "Mekonnen",
+    "lastName": "Gebremichael",
+    "title": "",
+    "department": "",
+    "email": "mekonnen@seas.ucla.edu",
+    "labUrl": "https://samueli.ucla.edu/people/mekonnen-gebremichael/",
+    "imageId": "",
+    "researchThemes": "Our lab integrates climate science, hydrology, remote sensing, and artificial intelligence to understand and predict water-related and environmental extremes—including floods, droughts, and wildfires—and translate scientific advances into actionable information for natural resources management and climate resilience.",
+    "dayToDay": "Day-to-day activities include analyzing large geospatial datasets and evaluating skill. We also collaborate with researchers, agencies, and stakeholders to translate our findings into practical tools and actionable information for water and natural resources management.",
+    "skills": "Satellite remote sensing, how to work with large climate/hydrology/wildfire datasets, statistical investigation methods, python programming",
+    "bigIdeas": "I want to show how science, technology, and curiosity can help us better predict floods, droughts, wildfires, and other environmental challenges, turning knowledge into solutions that protect people and the planet. I hope to inspire the next generation of scientists and help the public and policymakers use scientific insights to build a safer, more sustainable, and climate-resilient future.",
+    "whyHost": "yes",
+    "mentor": "Mekonnen Gebremichael (Professor), Sorato Nakano (PhD Student)",
+    "mentoringEnvironment": "Our lab provides hands-on experience with real-world datasets, computational tools, and physical science concepts while investigating pressing environmental challenges affecting California, including droughts, floods, wildfires, and water resources. Participants will strengthen their computational and scientific skills, deepen their understanding of Earth system processes, and gain practical experience they can translate into engaging STEM learning experiences for their students.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "mohammad-khalid-jawed",
+    "firstName": "Mohammad",
+    "lastName": "Khalid Jawed",
+    "title": "",
+    "department": "",
+    "email": "khalidjm@seas.ucla.edu",
+    "labUrl": "https://structures.computer/",
+    "imageId": "18ADmIZWNz5S5V1vUJSjPf-P8mK2JAc9j",
+    "researchThemes": "Robotics; Mechanics and materials; Machine Learning and AI",
+    "dayToDay": "Fabrication and rapid prototyping; modeling and simulation; AI model training",
+    "skills": "Some experiments using Slinky and Shrinky Dink can potentially be used as hands-on teaching tools",
+    "bigIdeas": "How science (robotics, AI, mechanics) manifests itself in our everyday activities, e.g., when tying a shoelace or when playing with a Slinky.",
+    "whyHost": "Some of our experiments and models use everyday toys (available off-the-shelf), e.g., Shrinky Dink and Slinky. We want to use some of our research results to make simple activity kits or teaching tools for K-12 students.",
+    "mentor": "",
+    "mentoringEnvironment": "Some of our experiments and models use everyday toys (available off-the-shelf), e.g., Shrinky Dink and Slinky. We want to use some of our research results to make simple activity kits or teaching tools for K-12 students.",
+    "outreach": "We have NSF grants for open-source software (https://github.com/structuresComp/dismech-python) and outreach.",
+    "newToOutreach": true
+  },
+  {
+    "id": "nader-sehatbakhsh",
+    "firstName": "Nader",
+    "lastName": "Sehatbakhsh",
+    "title": "",
+    "department": "",
+    "email": "nsehat@ee.ucla.edu",
+    "labUrl": "https://ssysarch.ee.ucla.edu/",
+    "imageId": "",
+    "researchThemes": "Security and robotics",
+    "dayToDay": "Here is a good list of current projects: https://ssysarch.ee.ucla.edu/projects.html",
+    "skills": "Depends on the project it will be technical details in systems, robotics, ML, and security. It could also be more on hardware design and FPGAs. Also, soft skills such as team work and team management and student advising.",
+    "bigIdeas": "We are working on building future trustworthy robotic systems that can interact securely.",
+    "whyHost": "New opportunity. Also curious to learn about the key challenges they face and how our research could be useful for them.",
+    "mentor": "Most likely me and my postdoc.",
+    "mentoringEnvironment": "We are working on cutting edge and quite interesting topics. We have a very friendly and diverse group of students. I'm sure they will love it here!",
+    "outreach": "I have co-organized a K-12 summer school called LACC for two years.",
+    "newToOutreach": false
+  },
+  {
+    "id": "nathan-szymanski",
+    "firstName": "Nathan",
+    "lastName": "Szymanski",
+    "title": "",
+    "department": "",
+    "email": "nszymanski@seas.ucla.edu",
+    "labUrl": "https://szymanski-research-group.com/",
+    "imageId": "1LIH4hieRJ3cUgijAH7Jm2SzrRbt4ABfn",
+    "researchThemes": "Our lab studies how materials form and change over time, with the goal of discovering new materials and improving existing ones. We combine artificial intelligence, computer simulations, and automated experiments to better understand and predict materials behavior.",
+    "dayToDay": "On a typical day, members of our lab train and test AI models, run experiments by mixing powders and heating them to form new materials, and analyze the results to decide what experiments to try next. We also write computer programs and work with robots to automate experiments and speed up the process of discovering new materials.",
+    "skills": "Teachers would gain hands-on experience with materials synthesis and characterization, including preparing samples, running experiments, and analyzing the results. They would also learn how to use AI and machine learning to make predictions, write simple computer programs, and work with automated laboratory equipment. Throughout the process, they would develop skills in data analysis, problem-solving, and experimental design that they could bring back to their classrooms.",
+    "bigIdeas": "Materials are at the heart of nearly every modern technology, from batteries and electronics to clean energy systems, and discovering better materials is essential for addressing many of society's biggest challenges. I'd like to communicate how artificial intelligence, robotics, and traditional experiments can work together to accelerate scientific discovery, making it faster and less expensive to develop new materials.",
+    "whyHost": "I really enjoy the social aspect of science, and I think it would be great to connect with someone from a different background, especially a high school teacher who has a good sense of how the next generation of students thinks and learns.",
+    "mentor": "The PI would serve as a direct mentor, and 4th-year PhD student Claude Tong would also help.",
+    "mentoringEnvironment": "As a relatively young faculty member, I place a strong emphasis on teaching and mentoring, and I enjoy finding ways to make complex scientific ideas accessible to people from different backgrounds. Our lab is also highly interdisciplinary (combining chemistry, physics, computer science, and engineering) which provides many opportunities for teachers to connect our research to topics they teach in the classroom. We have a collaborative and welcoming group, and I would work closely with the participating teacher to ensure they gain meaningful hands-on experience while developing ideas they can bring back to their students.",
+    "outreach": "As a postdoctoral researcher, I participated in a high school outreach event where we introduced students to materials science and engineering. We discussed how materials science impacts everyday technologies, what materials scientists do, and the different career opportunities available to students pursuing a degree in the field. I have not done any outreach with my own group yet as a PI but would love to get involved.",
+    "newToOutreach": true
+  },
+  {
+    "id": "paul-s-weiss",
+    "firstName": "Paul S.",
+    "lastName": "Weiss",
+    "title": "",
+    "department": "",
+    "email": "stm@g.ucla.edu",
+    "labUrl": "https://nano.ucla.edu",
+    "imageId": "",
+    "researchThemes": "nanoscience, biotechnology, entrepreneurship, quantum",
+    "dayToDay": "Materials measurements, for the most part, from the atomic scale to the micron scale",
+    "skills": "It depends on the project. We are working on novel materials, therapeutics, cosmetics, fire retardants, and other diverse projects",
+    "bigIdeas": "Real science and technology cross the borders between disciplines",
+    "whyHost": "Yes (I have done this in the past, including the AP chemistry teacher who taught all of my children).",
+    "mentor": "A senior PhD student or postdoc would be the main mentor.",
+    "mentoringEnvironment": "We have very broad coverage of fields. We are extremely active in both research and science  communication. Our group meetings cover many fields from chemistry, physics, and engineering, to medicine, therapeutics, startups, cosmetics, food, and more.",
+    "outreach": "As CNSI director, I promoted and expanded outreach. I have had many high school students in my lab including a Regeneron finalist and many who have published papers with us. I ran a science communications workshop with actor Alan Alda and won a national award in science communication. I remain active in outreach nationally and internationally.",
+    "newToOutreach": false
+  },
+  {
+    "id": "piush-behera",
+    "firstName": "Piush",
+    "lastName": "Behera",
+    "title": "",
+    "department": "",
+    "email": "pbehera@seas.ucla.edu",
+    "labUrl": "https://beheralab.com",
+    "imageId": "",
+    "researchThemes": "I focus on developing new materials for energy-efficient semiconductor technology. My main focus is on making ultrathin films of dielectrics, semiconductors, metals, and superconductors.",
+    "dayToDay": "Our group primarily focuses on thin-film materials growth, materials characterization, device fabrication, and electrical characterization. Typically this means developing/exploring new Atomic Layer Deposition (ALD) processes and measuring the properties of these ALD films. Regular literature surveys and data analysis is required as well.",
+    "skills": "Semiconductor materials and device processing. Hands-on experience with thin-film deposition systems. Advanced materials characterization techniques.",
+    "bigIdeas": "Future trends in semiconductor technologies, how semiconductor technologies not only shape modern-day experience but are also key enablers of future technologies, and additionally how complex the semiconductor industry is with multiple large and small companies working in conjunction to create a single product.",
+    "whyHost": "Materials Science & Engineering is a small, but I believe very important, area of research that is often unknown to high schoolers and the broader public. I believe giving more exposure to this area and connecting with major industries (e.g. semiconductors) would not only be beneficial but scientifically interesting to incoming teachers. Finally, I have a strong interest in understanding what current high school students are interested in scientifically and how we can further connect modern engineering to those interests.",
+    "mentor": "Graduate Student",
+    "mentoringEnvironment": "As a newer lab we have a large degree of flexibility regarding both research directions and overall group culture. My focus is to foster a collaborative environment where students from undergraduate to graduate can talk and learn from one another.",
+    "outreach": "",
+    "newToOutreach": true
+  },
+  {
+    "id": "remy-wang",
+    "firstName": "Remy",
+    "lastName": "Wang",
+    "title": "",
+    "department": "",
+    "email": "remywang@cs.ucla.edu",
+    "labUrl": "https://repl.la",
+    "imageId": "1_IXp0yw1-gAiPcLNx_CGfCUedZI4pehE",
+    "researchThemes": "The Relational Programming Lab (RePL) at UCLA studies fundamental problems in databases and programming languages, including algorithms for query execution, query optimization, and the design of query languages.",
+    "dayToDay": "Design and implement algorithms, prove theorems, design and implement programming languages.",
+    "skills": "A teacher can participate in our cutting-edge research projects, as well as learn techniques to teach algorithms and programming languages effectively.",
+    "bigIdeas": "Algorithms and programming languages will have lasting value even in the age of generative artificial intelligence: they are the only way to provide instructions to a computer with perfect precision.",
+    "whyHost": "I believe the best research ideas must be simple enough to be explained to a high school student. A high school teacher has the perspective needed to distill the essence of research ideas.",
+    "mentor": "I will provide mentorship myself along with one of my graduate students.",
+    "mentoringEnvironment": "Our lab members work hard to communicate our research to a wide audience, even though our work can be technically challenging. Each of us maintains a blog where we communicate our work in a simple way.",
+    "outreach": "I have taught robotics to Kindergarteners - it's amazing how early we can introduce students to STEM.",
+    "newToOutreach": false
+  },
+  {
+    "id": "sam-emaminejad",
+    "firstName": "Sam",
+    "lastName": "Emaminejad",
+    "title": "",
+    "department": "",
+    "email": "emaminejad@ucla.edu",
+    "labUrl": "https://www.i2bl.org",
+    "imageId": "1FwUKYaD53VzCz4Ma3GuAz466Nt72lCQF",
+    "researchThemes": "Our laboratory develops technologies to measure molecules across a broad range of biological environments—from droplets outside the body, to sweat on the skin, beneath the skin, and deep within tissues. By integrating robotics, bioelectronics, materials science, and AI, we aim to transform how health is monitored, diseases are detected, and treatments are personalized, with applications ranging from physiological stress and organ health to precision drug dosing.",
+    "dayToDay": "Our researchers design and build miniature robotic laboratories that automate biochemical experiments, wearable sensors that analyze molecules in sweat, and minimally invasive or implantable devices that continuously monitor the body's chemistry. Daily activities span device fabrication, electronics, programming, microscopy, biochemical experiments, and data analysis, often bringing together researchers from different disciplines to solve challenging problems. Teachers will have opportunities to participate in these activities and experience how scientific ideas evolve into working technologies with real-world applications.",
+    "skills": "Teachers will gain hands-on exposure to emerging technologies at the intersection of engineering, chemistry, biology, and computer science, with activities tailored to their interests and experience.  Potential learning opportunities include:  Robotics and automation: Using programmable magnetic systems to manipulate microscopic droplets and automate biochemical experiments.  Wearable and implantable bioelectronics: Exploring how sensors detect chemical and biological signals in sweat, beneath the skin, and within tissues.  Chemistry and molecular measurements: Learning how biochemical reactions and molecular recognition enable the measurement of biomarkers relevant to human health.  Programming, imaging, and AI: Applying computational tools to control experiments, process experimental images, and analyze data.  Experimental design and scientific problem-solving: Developing hypotheses, conducting experiments, troubleshooting devices, and interpreting results.  Connecting research to STEM education: Identifying opportunities to translate advanced research concepts into accessible, engaging classroom activities and interdisciplinary learning experiences.  No prior experience in biomedical engineering or robotics is required. Our goal is to provide an authentic research experience that builds on each teacher's expertise while introducing new scientific and technical perspectives.",
+    "bigIdeas": "Much of modern healthcare relies on intermittent measurements that provide only snapshots of a patient's condition. Our research explores how advances in robotics, electronics, and molecular sensing can enable more accessible, frequent, and ultimately continuous measurements of human biology. For example, we are developing miniature robotic platforms that can perform sophisticated molecular tests using very small sample volumes, alongside wearable and implantable technologies capable of monitoring biochemical changes in and around the body. Together, these approaches could enable earlier recognition of physiological stress and organ dysfunction, more individualized medication dosing, and better-informed clinical decisions. Beyond their medical implications, these technologies demonstrate how fundamental scientific principles—from electromagnetism and semiconductor physics to chemical reactions and molecular biology—can converge to address important societal challenges. We hope to communicate that some of the most consequential scientific advances emerge at the boundaries between disciplines, and that students who develop strong foundations in STEM can contribute to solving problems whose solutions have not yet been imagined.",
+    "whyHost": "We believe that the impact of scientific research extends beyond technological discoveries to the people it inspires and the opportunities it creates. Over the years, our laboratory has hosted numerous high-school students, several of whom have subsequently pursued undergraduate education and progressed to doctoral programs at leading universities. These experiences have demonstrated the lasting influence that early exposure to authentic research and meaningful mentorship can have on students' academic and professional trajectories. Hosting a STEM teacher presents an opportunity to extend this impact considerably. By participating directly in research, teachers can gain firsthand insight into how scientific questions are formulated, how experiments are designed, and how discoveries emerge through collaboration, persistence, and creativity. We also hope to learn from teachers about effective ways to translate cutting-edge research into classroom experiences that engage students with diverse interests and backgrounds. Ultimately, we see this program as an opportunity to build lasting connections between university research and secondary education, helping more young people recognize the opportunities available to them in science and engineering.",
+    "mentor": "A dedicated graduate student researcher working on our ferrobotics, wearable biosensors, or implantable sensing technologies, supported by Professor Emaminejad and our interdisciplinary research team. We will match the teacher with a mentor and research activities aligned with their scientific background and interests, providing structured guidance and opportunities for independent exploration.",
+    "mentoringEnvironment": "Our laboratory combines an interdisciplinary research environment with a longstanding commitment to mentoring students at different stages of their academic development. Our research spans robotics, electronics, materials science, chemistry, biology, and AI, offering teachers from a broad range of STEM disciplines opportunities to engage in relevant, hands-on research. The experimental nature of our work also makes it particularly well suited to connecting fundamental scientific concepts with tangible technological applications. Importantly, we regularly host high-school students in our laboratory, and former high-school researchers have progressed to undergraduate and doctoral studies at leading institutions. Participating teachers would therefore join an environment where secondary-level students are already engaged in research, creating opportunities to interact with young researchers, observe effective mentorship practices, and explore approaches to engaging students in authentic scientific inquiry. Teachers will receive dedicated graduate-student mentorship, regular faculty interaction, and a research experience tailored to their interests and preparation. Our aim is to create an environment where teachers are treated as valued research collaborators and leave with both new technical perspectives and practical inspiration for their classrooms.",
+    "outreach": "Our laboratory has extensive experience mentoring high-school students through hands-on research opportunities, laboratory activities, and sustained interactions with faculty, graduate students, and undergraduate researchers. We have hosted numerous high-school students over the years, including former trainees who subsequently progressed through undergraduate STEM programs and into PhD programs at leading universities. We continue to host high-school researchers, integrating them into our laboratory environment and introducing them to experimental methods, interdisciplinary problem-solving, and scientific communication. These experiences have helped us develop mentoring approaches that make advanced research accessible to students with varying levels of technical preparation while maintaining meaningful scientific engagement. We see the Keck–EnCorps program as a natural extension of these efforts and an opportunity to broaden our impact by working directly with the educators who shape students' early experiences with science and engineering.",
+    "newToOutreach": false
+  },
+  {
+    "id": "samanvaya-srivastava",
+    "firstName": "Samanvaya",
+    "lastName": "Srivastava",
+    "title": "",
+    "department": "",
+    "email": "samsri@ucla.edu",
+    "labUrl": "https://www.srivastava-lab.net/",
+    "imageId": "1uqvzIk5G2kJ3EPcuSmbpLNozlI87u-6Q",
+    "researchThemes": "We synthesize new charged polymers and design soft, water-based materials by controlling how they assemble, much like oil and vinegar separating but at the microscopic scale. We use them to build underwater adhesives, tiny “protocell” reactors for making biochemicals, materials that recover rare earth elements and clean water, and lower-carbon building materials.",
+    "dayToDay": "Lab members synthesize and purify custom polymers, then mix them into solutions and watch droplets and gels form under the microscope. They measure how strong, sticky, or stretchy these materials are using rheometers, adhesion testers, and light-scattering instruments. They also analyze data with simple coding tools, design the next experiment as a team, and share results at weekly group meetings; some days involve building small water-treatment setups or 3D-printing gels.",
+    "skills": "• Polymer synthesis and characterization: making polymers from small-molecule building blocks, purifying them, and verifying their structure and size using NMR and FTIR spectroscopy, gel permeation chromatography (GPC), and MALDI mass spectrometry. • Formulating hands-on experiments with polymers, salt, and water that translate well into classroom demonstrations. • Laboratory measurement and instrumentation: optical microscopy, turbidity and light scattering, viscosity and rheology, and adhesion testing. • Experimental design, controls, and handling uncertainty in data. • Data analysis and visualization with beginner-friendly Python. • Connecting chemistry, physics, and biology concepts (chemical bonding and reactions, charge, phase separation, diffusion) to real engineering problems. • Communicating research to non-experts and turning a research question into an inquiry-based lesson.",
+    "bigIdeas": "Simple physical ideas, like opposite charges attracting and liquids separating like oil and water, can be harnessed to solve big problems. By designing and synthesizing polymers molecule by molecule, we control how these materials assemble. The same principle that forms droplets inside living cells lets us make glues that work underwater and in the body, tiny reactors that produce medicines and biochemicals with less waste, materials that recover rare earth elements needed for electronics and clean energy, and treatment steps that make desalination more efficient.  • For high school students: cutting-edge engineering starts from concepts they already learn in chemistry and physics, and they can do this work. • For the public and policymakers: fundamental materials research pays off in national priorities, including secure critical-mineral supply chains, clean water in drought-prone California, sustainable manufacturing, and lower-carbon construction.",
+    "whyHost": "Teachers multiply impact: one teacher who experiences real research brings that excitement and authentic science to hundreds of students every year. Our lab has already worked with teachers through CNSI programs, where lab members trained middle and high school science teachers to run classroom experiments on water filtration (2023) and nanoscale control of wetting (2024). We would like to build on that with a deeper, research-based partnership. Our research, from polymer synthesis to working materials, also lends itself naturally to safe, low-cost classroom activities, and a teacher's perspective would help us communicate our work better and train our graduate students as mentors and educators.",
+    "mentor": "The teacher would work with Prof. Samanvaya Srivastava and a graduate student or postdoctoral mentor from our group, chosen based on the teacher's interests. Our group includes an awardee of the CBE Outstanding TA Award, students experienced in mentoring undergraduate and high-school researchers, and members who have led teacher-training and K-12 outreach activities.",
+    "mentoringEnvironment": "• A strong mentoring record: we have trained 7 Ph.D. graduates, 11 MS graduates, 9 postdoctoral scholars, and more than 40 undergraduates, plus visiting high-school students in several summers (including 3 in 2026). Our alumni include faculty members at a research university and a teaching-focused university.\n• Proven teaching skills: group members have received UCLA's Distinguished Teaching Award for Teaching Assistants and the CBE Outstanding TA Award, and one recent Ph.D. is now a teaching professor.\n• A collaborative, team-based culture: newcomers work alongside experienced members, with weekly group meetings and clear, structured projects.\n• Research suited to inquiry-based teaching: our work spans the full path from molecule to material to application. A teacher can follow a polymer from its synthesis in a flask to a working adhesive or water-treatment material, and many of our experiments are visual, hands-on, and build directly on high school chemistry, physics, and biology.\n• Direct experience with educators: our CNSI teacher-training workshops gave us practice adapting research for teachers.",
+    "outreach": "• CNSI Outreach Programs, UCLA (2023-2024): Lab members trained middle and high school science teachers to run classroom experiments on water filtration (2023) and nanoscale control of wetting (2024), and led a liquid-crystal activity for about 60 high school students from underrepresented backgrounds at Empower Diversity in STEM Day (2023).\n• Exploring Your Universe, UCLA (2022-present): An interactive science booth at UCLA's largest annual STEM event, which draws more than 500 visitors each year.\n• Sunday Funday, Willows Community School (2024): An interactive science booth for more than 100 students.\n• Science Slam, Westwood Charter Elementary School (2023): Hands-on science demonstrations for elementary students, with UCLA GradSWE and CNSI.\n• Hosting high-school researchers: Visiting high-school students conducted summer research in our lab in 2023, 2025, and 2026.\n• Mentoring programs: UC LEADS, UCLA Samueli Summer Undergraduate Research Program, Undergraduate Research Fellowship Program, PEERS lab tours, and the Academic Journey program with WE@UCLA.",
+    "newToOutreach": false
+  },
+  {
+    "id": "sean-yamada-hunter",
+    "firstName": "Sean",
+    "lastName": "Yamada-Hunter",
+    "title": "",
+    "department": "",
+    "email": "yamadahunter@ucla.edu",
+    "labUrl": "https://yamadahunterlab.ucla.edu/",
+    "imageId": "1jAmVPglz4121KdAr5OqBOyFHuTBFg4az",
+    "researchThemes": "We are a bioengineering lab specializing in developing cancer immunotherapies by employing a mix of protein engineering, synthetic biology, and immunology.",
+    "dayToDay": "They do a mix of wet and dry lab experiments. In the wet lab, they will typically be doing molecular cloning, tissue culture, yeast culture, protein production, and flow cytometry. In the dry lab they will be doing computational protein design and data analysis.",
+    "skills": "They would learn bioengineering lab techniques (such as cloning, bacterial, yeast, and mammalian cell culture, assays such as ELISA and flow cytometry). They would also learn protein design, and the steps required to engineer those proteins as therapeutics.",
+    "bigIdeas": "Our work is focused on developing next generation cancer therapies that harness a patient's own immune system and allow more cancer patients to realize the potential of curative therapy.",
+    "whyHost": "Yes",
+    "mentor": "I have many graduate students who expressed interest in hosting a teacher this summer, including Bioengineering PhD students (Sam O'Brien, Chiara Cline, and Liana Hiekali), a Bioengineering MS student (Frida Sandoval), and a Data Science in Health MS student (Karen Harrison).",
+    "mentoringEnvironment": "In addition to the many students in my lab who are also passionate about STEM education, we are a young lab with a lot of experience in mentoring new researchers in our group (including 4 undergrads and multiple MS students). I am a junior PI for whom mentoring is very important and I meet with each person in my lab weekly or bi-weekly. A teacher working with my group would be in line for the same mentorship environment, where they would be paired with a graduate student mentor who was interested in STEM education, and would meet with me routinely to check in about their experience.",
+    "outreach": "I participated in an after-school elementary school STEM education program as a graduate student (called Building Futures Now) and volunteer at my daughter's elementary school. Otherwise, I have not participated in any STEM-facing K-12 outreach recently.",
+    "newToOutreach": true
+  },
+  {
+    "id": "steven-chavez",
+    "firstName": "Steven",
+    "lastName": "Chavez",
+    "title": "",
+    "department": "",
+    "email": "stchavez@ucla.edu",
+    "labUrl": "https://stchavez2.wixsite.com/my-site",
+    "imageId": "1rpBGHevRlRxqgBIEsG6ueJNHehGldllz",
+    "researchThemes": "We design ways to use light to study and drive sustainable chemical conversion processes.",
+    "dayToDay": "We synthesize catalytic nanomaterials via wet chemistry, characterize them using microscopy and spectroscopy, and test them in custom built (photo)reactor systems.",
+    "skills": "Wet chemical synthesis, electron microscopy, reactor use, spectroscopy and science communication",
+    "bigIdeas": "The chemical industry needs a paradigm shift if they want to transition to renewable energy sources. We need to change how we study catalysts and operate reactors at scale.",
+    "whyHost": "The only reason I am able to have this faculty position is because of one of my high school teachers that inspired me and changed my life. If I can enable one teacher to do the same for someone else, it would be worth it.",
+    "mentor": "",
+    "mentoringEnvironment": "My lab is highly interdisciplinary and places an emphasis on mentorship. There are many skills to learn and most of the students in the group are young so they will be learning together with the teacher. The PI is also a newer PI and has time to dedicate to mentoring the teacher.",
+    "outreach": "Yes. I have worked for the last 14 years designing, implementing, and evaluating programs to recruit and retain first-gen students in STEM. A few of these programs involved teacher workshops related to integrating STEM into their classrooms.",
+    "newToOutreach": false
+  },
+  {
+    "id": "tara-pena",
+    "firstName": "Tara",
+    "lastName": "Peña",
+    "title": "",
+    "department": "",
+    "email": "tpena@seas.ucla.edu",
+    "labUrl": "https://www.pena-lab.com/team",
+    "imageId": "",
+    "researchThemes": "Nanoelectronics with low-dimensional materials.",
+    "dayToDay": "Characterize 2D materials with optical microscopy and spectroscopy, then test nanoelectronics.",
+    "skills": "Materials characterization and device testing.",
+    "bigIdeas": "Semiconductors are ubiquitous in our everyday technology and have enabled advancements in integrated circuits over the past seven decades.",
+    "whyHost": "To provide insights on materials engineering and allow the teacher to convey career opportunities to their future students.",
+    "mentor": "",
+    "mentoringEnvironment": "Our team strives to improve our scientific communication.",
+    "outreach": "I participated in K12 outreach programs as an undergraduate and graduate student.",
+    "newToOutreach": false
+  },
+  {
+    "id": "vijay-dhir",
+    "firstName": "Vijay",
+    "lastName": "Dhir",
+    "title": "",
+    "department": "",
+    "email": "vdhir@seas.ucla.edu",
+    "labUrl": "",
+    "imageId": "",
+    "researchThemes": "Innovative way for desalination of water using solar or waste heat.",
+    "dayToDay": "I have two senior-level students working on the project. They carry out the experiments on the",
+    "skills": "Conducting Experiments and analyzing the data to optimize the process.",
+    "bigIdeas": "The technique is valuable to produce potable water from sea water or brackish water.",
+    "whyHost": "To do public service and enhance the background of  the teachers.",
+    "mentor": "Myself",
+    "mentoringEnvironment": "Provide hands-on experience with a new technology.",
+    "outreach": "In the past I have taken in high school students in my lab. In fact I started the high school summer research program.",
+    "newToOutreach": false
+  },
+  {
+    "id": "william-speier",
+    "firstName": "William",
+    "lastName": "Speier",
+    "title": "",
+    "department": "",
+    "email": "speier@ucla.edu",
+    "labUrl": "https://bair.seas.ucla.edu/",
+    "imageId": "",
+    "researchThemes": "We apply AI methods to various forms of biomedical data to build assistive tools for improving patient care.",
+    "dayToDay": "Most lab time is spent on statistical analysis of biomedical data and development of machine learning algorithms. We also meet regularly with clinical faculty to discuss clinical problems and how to positively impact workflows and patient care.",
+    "skills": "Deep Learning, image analysis, biomedical signal processing, experimental design.",
+    "bigIdeas": "AI tools have the potential to improve patient care through improving accuracy and extending access to underserved populations.",
+    "whyHost": "Yes",
+    "mentor": "I would likely work directly with teachers who join our lab.",
+    "mentoringEnvironment": "Our lab is situated at the intersection of the engineering and medical schools at UCLA. We have unique access to technical resources and clinical facilities to produce impactful biomedical research. Our lab consists of faculty and students who have been recognized for teaching excellence, and we have a track record of success working with high school students, including several published journal papers that high school students have authored.",
+    "outreach": "I have mentored several high school students in an individual capacity. One of them was engaged in the Authentic Science Research Program through his high school. I don't know if either of these count for this question. I am definitely interested in engaging in more structured outreach programs.",
+    "newToOutreach": false
+  },
+  {
+    "id": "xiang-chen",
+    "firstName": "Xiang",
+    "lastName": "Chen",
+    "title": "",
+    "department": "",
+    "email": "xac@ucla.edu",
+    "labUrl": "https://hci.ucla.edu",
+    "imageId": "",
+    "researchThemes": "Our mission is to augment human intelligence through symbiotic computing—embedding AI throughout expert workflows to amplify human abilities, overcome human limitations, and enable human-AI teams to outperform either humans or AI working alone.",
+    "dayToDay": "Conduct user research, design and implement software tools.",
+    "skills": "User research and software prototyping",
+    "bigIdeas": "My lab builds AI tools that work alongside people instead of replacing them. We call this human-AI symbiosis. Our current focus is science. For example, we are building tools for drug-discovery researchers in which AI agents check the scientist's ideas about which protein a new medicine should target against the published literature, while the scientist decides which ideas are worth testing. I want high school students to see that AI is something they can study, design and question, and that research can start from asking how a tool should fit the person using it. For the public, I want to show that AI can help experts make discoveries faster without removing the human judgment people rely on. For policymakers, our studies ask where people should stay in control of AI-supported decisions, which can inform how AI in science is funded and governed.",
+    "whyHost": "I teach in the UCLA Summer Institute's pre-college Generative AI course and judge the International Science and Engineering Fair, and both put me in front of high school students who are curious about AI but mostly meet it as a chatbot. A teacher reaches far more of those students than I can, and over many years. In my lab, a teacher would work with my PhD students on our human-AI tools for science, take part in user studies, and see how we turn a question into a prototype and an experiment. I'd like the teacher to leave with a classroom activity they designed with us, such as having students test an AI tool and decide when to trust its answer. My lab would also learn from the teacher how high school students think about AI. That would help us explain our research to the public and design tools that newcomers can use.",
+    "mentor": "PI and a PhD student.",
+    "mentoringEnvironment": "My lab has trained seven PhD students, five of whom have graduated, along with master's students, visiting graduate researchers and, in 2026, undergraduates funded by an NSF REU supplement. My students have won an Amazon PhD Fellowship, UCLA ECE Dissertation Year Fellowships and the UCLA Engineering Rice Outstanding Master Student Award. The lab is used to welcoming people from outside it: this year we host a Fulbright U.S.-ASEAN Visiting Scholar. I teach Interactive & Applied Machine Learning and Human Factors in AI, so I am practiced at explaining AI to people meeting it for the first time. I also lecture in the UCLA Summer Institute's pre-college Generative AI course and judge the International Science and Engineering Fair, so I know what high school students already understand about AI and where they struggle. A teacher would join our weekly lab meetings and be paired with a PhD student on a project.",
+    "outreach": "Yes. In 2024 I gave a guest lecture in CS97 Generative AI, a course in the UCLA Summer Institute, UCLA's pre-college summer program for high school students. Since 2020 I have judged the International Science and Engineering Fair, the largest international science competition for high school students. I have not yet taken part in a program for K-12 teachers. Hosting a teacher in my lab would be my first.",
+    "newToOutreach": false
+  },
+  {
+    "id": "yuzhang-li",
+    "firstName": "Yuzhang",
+    "lastName": "Li",
+    "title": "",
+    "department": "",
+    "email": "yuzhangli@ucla.edu",
+    "labUrl": "https://sites.google.com/view/li-groupucla/home",
+    "imageId": "",
+    "researchThemes": "Energy storage and biological systems",
+    "dayToDay": "Read literature, perform experiments, analyze data, draft manuscripts.",
+    "skills": "What battery research looks like in a real lab.",
+    "bigIdeas": "How fundamental science is valuable, even if it does not lead to commercial products in the short term.",
+    "whyHost": "I would love for the science in my lab to be communicated to a younger audience through teachers.",
+    "mentor": "Myself, a phd student, or senior postdoc.",
+    "mentoringEnvironment": "Our group environment is extremely open and generous; learning will be accelerated by doing and making real contributions.",
+    "outreach": "I've done many programs at CNSI (Nanovation; mentoring high school teachers, etc.)",
+    "newToOutreach": false
+  }
+];
+
+/* ---------- helpers ---------- */
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fullName = f => `${f.firstName} ${f.lastName}`;
+const host = u => { try { return new URL(u).host.replace(/^www\./,''); } catch { return u; } };
+const linkify = s => s.replace(/(https?:\/\/[^\s)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+
+// Turn free text into paragraphs, keeping "•" bullet lists
+function formatText(t){
+  return t.split(/\n{2,}/).map(block => {
+    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+    if (lines.length && lines.every(l => /^[•\-–]\s/.test(l))) {
+      return '<ul>' + lines.map(l => `<li>${linkify(esc(l.replace(/^[•\-–]\s*/,'')))}</li>`).join('') + '</ul>';
+    }
+    return lines.map(l => /^[•]\s/.test(l)
+      ? `<ul><li>${linkify(esc(l.replace(/^•\s*/,'')))}</li></ul>`
+      : `<p>${linkify(esc(l))}</p>`).join('');
+  }).join('');
+}
+
+function metaLine(f){
+  if (!f.title && !f.department) return '';
+  return `<p class="meta">${f.title ? esc(f.title) : ''}${f.department ? `<span class="dept">${esc(f.department)}</span>` : ''}</p>`;
+}
+
+const ICON_EXT = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg>';
+const ICON_MAIL = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>';
+const ICON_BACK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>';
+
+const SECTIONS = [
+  ['researchThemes','Research themes','What are the main research themes of your lab?'],
+  ['dayToDay','A day in the lab','What do people in your lab do day to day?'],
+  ['skills','Skills a teacher would learn','What skills would a teacher learn in your lab?'],
+  ['bigIdeas','Big ideas & benefit to society','What ideas would you most like to communicate about your work, and how society might benefit?'],
+  ['whyHost','Why host a teacher','Why would you be interested in hosting a teacher in your lab?'],
+  ['mentor','Who would mentor','Who might mentor the teacher?'],
+  ['mentoringEnvironment','Mentoring environment','What makes you and your lab an excellent mentoring environment for a STEM secondary teacher?'],
+  ['outreach','Outreach & K–12 experience','Have you participated in outreach, K-12, or teacher programs?'],
+];
+
+/* ---------- directory page ---------- */
+let query = '';
+function renderDirectory(){
+  document.title = 'Keck–EnCorps Summer Research Experience · Host Faculty Directory';
+  app.innerHTML = `
+    <header class="site"><div class="wrap">
+      <div class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Keck–EnCorps Summer Research Experience</p>
+          <h1>Meet the faculty hosting teachers in their labs</h1>
+          <p class="lede">Thank you for your interest in our summer program. Please browse UCLA faculty interested in hosting STEM teachers in their lab through the Keck–EnCorps Summer Research Experience. Respond to <a href="${esc(GOOGLE_FORM_URL)}" target="_blank" rel="noopener">this Google Form</a> to select your top 3 choices.</p>
+        </div>
+        <div class="apply" role="region" aria-label="Apply">
+          <p class="apply-step">Ready to apply?</p>
+          <p class="apply-title">Select your top 3 labs</p>
+          <p class="apply-note">Browse the ${FACULTY.length} profiles below, then submit your choices in the Google Form.</p>
+          <a class="btn btn-primary apply-btn" href="${esc(GOOGLE_FORM_URL)}" target="_blank" rel="noopener">Open the Google Form ${ICON_EXT}</a>
+        </div>
+      </div>
+    </div></header>
+    <main class="wrap">
+      <div class="toolbar" role="search">
+        <label class="search">
+          <span class="sr" style="position:absolute;left:-9999px">Search faculty</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Search by name, department, research topic, or skill…" value="${esc(query)}" autocomplete="off">
+        </label>
+        <span class="count" id="count" aria-live="polite"></span>
+      </div>
+      <section class="grid" id="grid" aria-label="Faculty profiles"></section>
+    </main>`;
+  const input = document.getElementById('q');
+  input.addEventListener('input', e => { query = e.target.value; drawCards(); });
+  drawCards();
+}
+
+function drawCards(){
+  const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+  const list = FACULTY.filter(f => {
+    if (!terms.length) return true;
+    const hay = [fullName(f), f.title, f.department, f.researchThemes, f.skills, f.dayToDay].join(' ').toLowerCase();
+    return terms.every(t => hay.includes(t));
+  });
+  document.getElementById('count').textContent = `${list.length} of ${FACULTY.length} labs`;
+  document.getElementById('grid').innerHTML = list.length ? list.map(f => `
+    <article class="card">
+      <h2><a href="#/${f.id}">${esc(fullName(f))}</a></h2>
+      ${metaLine(f)}
+      <p class="theme">${esc(f.researchThemes)}</p>
+      <div class="card-foot">
+        ${f.labUrl
+          ? `<a class="lablink" href="${esc(f.labUrl)}" target="_blank" rel="noopener" title="Open lab website">${esc(host(f.labUrl))} ${ICON_EXT}</a>`
+          : `<span class="nolink">No lab website listed</span>`}
+        <span class="more" aria-hidden="true">View profile →</span>
+      </div>
+    </article>`).join('')
+    : `<p class="empty">No labs match “${esc(query)}”. Try a broader term.</p>`;
+}
+
+/* ---------- profile page ---------- */
+function renderProfile(f){
+  document.title = `${fullName(f)} · Keck–EnCorps Host Faculty`;
+  const sections = SECTIONS.filter(([k]) => f[k]);
+  const outreachNew = !f.outreach && f.newToOutreach;
+  app.innerHTML = `
+    <header class="site profile-head"><div class="wrap">
+      <a class="back" href="#/">${ICON_BACK} All faculty</a>
+      <p class="eyebrow">Host lab profile</p>
+      <h1>${esc(fullName(f))}</h1>
+      ${metaLine(f)}
+      <div class="actions">
+        ${f.labUrl ? `<a class="btn btn-primary" href="${esc(f.labUrl)}" target="_blank" rel="noopener">Visit lab website ${ICON_EXT}</a>` : ''}
+        ${f.email ? `<a class="btn btn-ghost" href="mailto:${esc(f.email)}">${ICON_MAIL} ${esc(f.email)}</a>` : ''}
+      </div>
+    </div></header>
+    <main class="wrap">
+      <div class="profile-body">
+        <article class="panel answers">
+          ${sections.map(([k,h,q]) => `
+            <section class="answer" id="s-${k}">
+              <h3>${h}</h3>
+              <p class="q">${esc(q)}</p>
+              <div class="a">${formatText(f[k])}</div>
+            </section>`).join('')}
+          ${outreachNew ? `
+            <section class="answer" id="s-outreach">
+              <h3>Outreach & K–12 experience</h3>
+              <div class="a"><p><span class="pill">New to outreach</span></p><p>This lab hasn't run outreach, K–12, or teacher programs yet and is interested in starting this summer.</p></div>
+            </section>` : ''}
+        </article>
+        <aside>
+          ${f.imageId ? `
+            <figure class="panel labimg" id="labimg">
+              <img src="https://drive.google.com/thumbnail?id=${encodeURIComponent(f.imageId)}&sz=w1200"
+                   alt="Image of the ${esc(f.lastName)} lab's work or equipment" loading="lazy" referrerpolicy="no-referrer">
+              <figcaption>From the ${esc(f.lastName)} lab</figcaption>
+            </figure>` : ''}
+          <nav class="panel jump" aria-label="On this page">
+            <h4>On this page</h4>
+            ${sections.map(([k,h]) => `<a href="#/${f.id}/${k}">${h}</a>`).join('')}
+            ${outreachNew ? `<a href="#/${f.id}/outreach">Outreach & K–12 experience</a>` : ''}
+          </nav>
+        </aside>
+      </div>
+    </main>`;
+  // If an image can't load (e.g. Drive file not shared publicly), hide it quietly
+  const img = document.querySelector('#labimg img');
+  if (img) img.addEventListener('error', () => document.getElementById('labimg').remove());
+}
+
+/* ---------- router (hash-based, works on GitHub Pages) ---------- */
+const app = document.getElementById('app');
+function route(){
+  const [id, section] = location.hash.replace(/^#\/?/, '').split('/');
+  const f = FACULTY.find(x => x.id === id);
+  if (f) {
+    renderProfile(f);
+    const target = section && document.getElementById('s-' + section);
+    target ? target.scrollIntoView() : window.scrollTo(0, 0);
+  } else {
+    renderDirectory();
+    window.scrollTo(0, 0);
+  }
+}
+window.addEventListener('hashchange', route);
+route();
+</script>
+</body>
+</html>
